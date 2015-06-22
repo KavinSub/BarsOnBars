@@ -1,0 +1,11 @@
+This is just a project I made for fun. Using this program you can create bars that oscillate vertically. You can specify their position, width, their amplitude, period and start time delay. You can create some interesting effects with that.
+
+To specify your own pattern you can enter information into a text file. There are some preset test files, to give you an idea of what you can do. By default the bars.txt file will be used if a text file is not specified. The following command is what you use to execute the program:
+
+java -jar BarsOnBars.jar [text file]
+
+Use the following format to enter your own pattern:
+[# of bars] - This should always be the first line
+[X position of bar] [Y position of bar] [Width of bar] [Amplitude (in pixels)] [Period (in milliseconds)] [Delay (in milliseconds)] [Color] - Do this for each bar
+
+For the color field you may enter the following colors; red, blue, black, cyan, green, orange, magenta and yellow.

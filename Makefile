@@ -4,7 +4,7 @@
 JCC = javac
 
 BarsOnBars: MainDisplay.class BarPanel.class Bar.class
-	jar cfm BarsOnBars.jar Manifest.txt MainDisplay.class BarPanel.class Bar.class
+	jar cvfm BarsOnBars.jar Manifest.txt MainDisplay.class BarPanel.class Bar.class
 	chmod 700 BarsOnBars.jar
 
 MainDisplay.class: MainDisplay.java

@@ -12,10 +12,11 @@ class MainDisplay{
 		if(args.length == 1) LoadBars(args[0]); 
 	    else LoadBars("bars.txt");
 
-		mainPanel = new BarPanel(800, 800, Color.BLACK, bars);
+		mainPanel = new BarPanel(800, 800, Color.WHITE, bars);
 		frame.add(mainPanel);
 		frame.setVisible(true);
-		frame.setSize(mainPanel.width, mainPanel.height);
+		//frame.setSize(mainPanel.width, mainPanel.height);
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		frame.setTitle("Bars on Bars");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}

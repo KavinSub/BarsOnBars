@@ -55,9 +55,9 @@ public class Bar{
 		bar = new Rectangle2D.Double(xPos, yPos, width, 0);
 	}
 
-	// Updates the height of the bar based on the given formula
+	// Updates the height of the bar based on a trigonometric formula
 	void updateHeight(double time){
-		//currentHeight = maxHeight * Math.sin((2 * Math.PI)/period * time);
+		
 		time -= delay;
 		if(time > 0){
 			currentHeight = maxHeight * Math.sin((2 * Math.PI)/period * time);

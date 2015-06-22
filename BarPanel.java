@@ -9,9 +9,6 @@ public class BarPanel extends JPanel implements ActionListener{
 	int height;
 	int width;
 
-	// Background panel color
-	Color background;
-
 	// Time stuff
 	Timer timer;
 	int currentTime;
@@ -36,8 +33,8 @@ public class BarPanel extends JPanel implements ActionListener{
 	public BarPanel(int width, int height, Color background, Bar[] bars){
 		this.width = width;
 		this.height = height;
-		this.background = background;
 		this.bars = bars;
+		setBackground(background);
 		currentTime = 0;
 		timer = new Timer(DELAY, this);
 		timer.start();		
@@ -58,6 +55,8 @@ public class BarPanel extends JPanel implements ActionListener{
 		for(int i = 0; i < bars.length; i++){
 			g2.setColor(bars[i].color);
 			g2.fill(bars[i].bar);
+			g2.setColor(Color.BLACK);
+			g2.draw(bars[i].bar);
 		}
 	}
 
@@ -78,7 +77,4 @@ public class BarPanel extends JPanel implements ActionListener{
 		repaint();
 		return;
 	}
-
-
-
 }
